@@ -100,26 +100,47 @@
       .image-gallery {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px; /* space between images */
+        gap: 20px;
         justify-content: center;
         margin-top: 15px;
       }
 
-      .image-gallery img {
+      .image-gallery figure {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
+        margin: 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery img {
+        width: 100%;
         height: 500px;
-        object-fit: cover; 
+        object-fit: cover;
         border: 3px solid #004080;
         padding: 5px;
         box-sizing: border-box;
         border-radius: 6px;
       }
 
+      .image-gallery figcaption {
+        margin-top: 8px;
+        font-size: 1rem;
+        color: #004080;
+        text-align: center;
+        padding: 0 8px 10px 8px;
+      }
+
       @media (max-width: 600px) {
-        .image-gallery img {
+        .image-gallery figure {
           flex: 1 1 100%;
           max-width: 100%;
+        }
+        .image-gallery img {
           height: auto;
         }
       }
@@ -175,12 +196,24 @@
         </em>
       </p>
 
-    <h2>Gallery</h2>
-    <div class="image-gallery">
-      <img src="images/shoutcaster1.jpg" alt="Dota 2 The International Casting Desk">
-      <img src="images/cologne2024.avif" alt="Intel Extreme Masters Cologne 2024 Stadium">
-      <img src="images/cluj2025.avif" alt="Scrawny and launuders at PGL Cluj-Napoca 2025">
-    </div>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <figure>
+          <a href="https://www.flickr.com/photos/dota2_theinternational/30302303908/">
+          <img src="images/shoutcaster1.jpg" alt="Dota 2 The International Casting Desk"></a>
+          <figcaption><a href="https://liquipedia.net/dota2/The_International/2018">The International 2018</a> Casting Desk feat. <a href="https://liquipedia.net/dota2/TobiWan">TobiWan</a> & <a href="https://liquipedia.net/dota2/SyndereN">syndereN</a></figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.hltv.org/gallery/view/209216">
+          <img src="images/cologne2024.avif" alt="Intel Extreme Masters Cologne 2024 Stadium"></a>
+          <figcaption><a href="https://www.hltv.org/events/7436/iem-cologne-2024">Intel Extreme Masters Cologne 2024</a> at the Lanxess Arena</figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.hltv.org/gallery/view/227058">
+          <img src="images/cluj2025.avif" alt="Scrawny and launuders at PGL Cluj-Napoca 2025"></a>
+          <figcaption>Scrawny and Launders casting at <a href="https://www.hltv.org/events/8043/pgl-cluj-napoca-2025">PGL Cluj-Napoca 2025</a></figcaption>
+        </figure>
+      </div>
 
     <nav>
       <ul>
