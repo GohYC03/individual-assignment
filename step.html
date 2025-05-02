@@ -106,6 +106,52 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.25);
       }
 
+      .content-container {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+
+      .text-content {
+        flex: 0 1 65%;
+      }
+
+      .image-sidebar {
+        flex: 0 1 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .image-sidebar img {
+        width: 100%;
+        height: auto;
+        border: 3px solid #004080;
+        border-radius: 6px;
+        padding: 5px;
+        box-sizing: border-box;
+        object-fit: cover;
+      }
+
+      @media (max-width: 900px) {
+        .content-container {
+          flex-direction: column;
+        }
+        .text-content, .image-sidebar {
+          flex: 1 1 100%;
+        }
+        .image-sidebar {
+          flex-direction: row;
+          overflow-x: auto;
+        }
+        .image-sidebar img {
+          flex: 0 0 auto;
+          width: 200px;
+          height: auto;
+        }
+      }
+
       @media (max-width: 480px) {
         header h1 {
           font-size: 2rem;
@@ -135,89 +181,104 @@
     </nav>
   </header>
 
-  <h2>Your Path to the Casting Desk</h2>
-  <ol>
-    <li>
-      <strong>Master Your Game(s):</strong>
-      <ul>
-        <li>Choose one or more esports titles you love (e.g., Valorant, Dota 2, League of Legends).</li>
-        <li>Study game mechanics, strategies, and player histories.</li>
-        <li>Watch professional tournaments and analyze top casters' styles.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Practice, Practice, Practice:</strong>
-      <ul>
-        <li>Record yourself casting over match replays or highlights.</li>
-        <li>Stream your commentary on platforms like YouTube or Twitch-even if you have no audience yet.</li>
-        <li>Listen back and refine your delivery, timing, and excitement.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Build a Portfolio:</strong>
-      <ul>
-        <li>Upload your best casting clips to social media or a personal website.</li>
-        <li>Share your work with friends or online communities for feedback.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Network with Organizers:</strong>
-      <ul>
-        <li>Contact tournament organizers and volunteer to cast small or community events.</li>
-        <li>Join esports communities and forums to connect with other aspiring casters.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Take Every Opportunity:</strong>
-      <ul>
-        <li>Don't be afraid to start with unpaid gigs-experience and exposure matter most early on.</li>
-        <li>Be persistent and professional; every event is a chance to learn and grow.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Develop Your Unique Style:</strong>
-      <ul>
-        <li>Experiment with different commentary approaches (play-by-play, color, hype).</li>
-        <li>Find what makes you stand out-whether it's humor, energy, or deep analysis.</li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <strong>Keep Learning and Adapting:</strong>
-      <ul>
-        <li>Stay updated on game patches, meta shifts, and esports news.</li>
-        <li>Seek feedback from peers and viewers to continually improve.</li>
-      </ul>
-    </li>
-  </ol>
+  <div class="content-container">
+    <main class="text-content">
+      <h2>Your Path to the Casting Desk</h2>
+      <ol>
+        <li>
+          <strong>Master Your Game(s):</strong>
+          <ul>
+            <li>Choose one or more esports titles you love (whether it is Counter-Strike 2, League of Legends, Rocket League etc.)</li>
+            <li>Study game mechanics, strategies, and player histories.</li>
+            <li>Watch professional tournaments and analyze top casters' styles.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Practice, Practice, Practice:</strong>
+          <ul>
+            <li>Record yourself casting over match replays or highlights.</li>
+            <li>Stream your commentary on platforms like YouTube or Twitch, even if you have no audience yet.</li>
+            <li>Listen back and refine your delivery, timing, and excitement.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Build a Portfolio:</strong>
+          <ul>
+            <li>Upload your best casting clips to social media or a personal website.</li>
+            <li>Share your work with friends or online communities for feedback.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Network with Organizers:</strong>
+          <ul>
+            <li>Contact tournament organizers and volunteer to cast small or community events.</li>
+            <li>Join esports communities and forums to connect with other aspiring casters.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Take Every Opportunity:</strong>
+          <ul>
+            <li>Don't be afraid to start with unpaid gigs (experience and exposure matter most early on).</li>
+            <li>Be persistent and professional; every event is a chance to learn and grow.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Develop Your Unique Style:</strong>
+          <ul>
+            <li>Experiment with different commentary approaches (play-by-play, color, hype).</li>
+            <li>Find what makes you stand out-whether it's humor, energy, or deep analysis.</li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          <strong>Keep Learning and Adapting:</strong>
+          <ul>
+            <li>Stay updated on game patches, meta shifts, and esports news.</li>
+            <li>Seek feedback from peers and viewers to continually improve.</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <br>
 
-  <h2>Tips for Aspiring Casters</h2>
-  <ul>
-    <li>Watch and learn from established commentators on Twitch or YouTube.</li>
-    <li>Join local or online casting workshops and communities.</li>
-    <li>Don't expect instant success-consistency and passion are key.</li>
-    <li>Be open to casting different games to broaden your opportunities.</li>
-  </ul>
+      <h2>Tips for Aspiring Casters</h2>
+      <ul>
+        <li>Watch and learn from established commentators on Twitch or YouTube.</li>
+        <li>Join local or online casting workshops and communities.</li>
+        <li>Don't expect instant success-consistency and passion are key.</li>
+        <li>Be open to casting different games to broaden your opportunities.</li>
+      </ul>
 
-  <p id="source">
-    <em>
-      Sources: 
-      <a href="https://www.indiatoday.in/education-today/jobs-and-careers/story/a-beginners-guide-to-becoming-an-esports-commentator-2676857-2025-02-10" target="_blank">India Today</a>, 
-      <a href="https://esportswales.org/advice/careers-in-esports/career-casting/" target="_blank">Esports Wales</a>
-    </em>
-  </p>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="inspiration.html">Inspiration & Resources</a></li>
-            <li><a href="skills.html">Skills & Tools</a></li>
-        </ul>
-    </nav>
+      <p id="source">
+        <em>
+          Sources: 
+          <a href="https://www.indiatoday.in/education-today/jobs-and-careers/story/a-beginners-guide-to-becoming-an-esports-commentator-2676857-2025-02-10" target="_blank">India Today</a>, 
+          <a href="https://esportswales.org/advice/careers-in-esports/career-casting/" target="_blank">Esports Wales</a>
+        </em>
+      </p>
+        
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="inspiration.html">Inspiration & Resources</a></li>
+              <li><a href="skills.html">Skills & Tools</a></li>
+          </ul>
+      </nav>
+    </main>
+
+    <aside class="image-sidebar">
+      <a href="https://www.hltv.org/gallery/view/66086">
+      <img src="images/ecs.avif" alt="James Bardolph and ddk casting at ECS Season 1"></a>
+      <a href="https://www.hltv.org/gallery/view/175129">
+      <img src="images/paris.jpg" alt="Casting Setup at the BLAST.tv Paris Major 2023"></a>
+      <a href="https://www.hltv.org/gallery/view/198896">
+      <img src="images/copenhagen.jpg" alt="Crowd at the PGL Copenhagen Major 2024"></a>
+    </aside>
+  </div>
 </body>
 </html>
