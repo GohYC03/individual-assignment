@@ -100,6 +100,58 @@
         padding: 10px;
         text-align: left;
       }
+
+      footer {
+        background-color: #ffccbf;
+        color: #004080;
+        text-align: center;
+        padding: 25px 10px 15px 10px;
+        border-radius: 8px;
+        box-shadow: 0 -2px 6px rgba(0,0,0,0.06);
+        margin-top: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      footer nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      footer nav ul li {
+        display: inline;
+      }
+
+      footer nav ul li a {
+        color: #003366;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      footer nav ul li a:hover, footer nav ul li a:focus {
+        background-color: #cce6ff;
+        color: #004080;
+      }
+
+      footer p {
+        margin: 10px 0 0 0;
+        font-size: 0.95rem;
+        color: #333333;
+      }
+
+      @media (max-width: 600px) {
+        footer nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
     </style>
 </head>
 <body>
@@ -142,12 +194,19 @@
         </tbody>
     </table>
 
-    <nav>
-        <ul>
+    <footer>
+      <div class="footer-content">
+        <nav>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="step.html">Step by Step Guide</a></li>
+            <li><a href="inspiration.html">Inspiration & Resources</a></li>
             <li><a href="skills.html">Skills & Tools</a></li>
-        </ul>
-    </nav>
+          </ul>
+        </nav>
+        <br>
+        <p>&copy; 2025 The Power of Words: Breaking into Esports Commentary. All rights reserved.</p>
+      </div>
+    </footer>
 </body>
 </html>
