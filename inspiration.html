@@ -88,8 +88,9 @@
       
       table {
         width: 100%;
+        table-layout: fixed;
         border-collapse: collapse;
-        margin-top: 20px;
+        margin: 20px 0;
       }
       
       table, th, td {
@@ -97,8 +98,20 @@
       }
       
       th, td {
+        border: 1px solid #004080;
         padding: 10px;
         text-align: left;
+        width: 25%;
+      }
+
+      th {
+        background-color: #cce6ff;
+        color: #004080;
+      }
+
+      .games-cell {
+        word-break: break-word;
+        white-space: normal;
       }
 
       footer {
@@ -168,30 +181,76 @@
   </header>
   
     <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Website</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>James Bardolph</td>
-                <td>Esports Commentator</td>
-                <td><a href="https://twitter.com/jamesbardolph" target="_blank">Twitter</a></td>
-            </tr>
-            <tr>
-                <td>Alex "Machine" Richardson</td>
-                <td>Esports Commentator</td>
-                <td><a href="https://twitter.com/MachineCSGO" target="_blank">Twitter</a></td>
-            </tr>
-            <tr>
-                <td>Paul "Redeye" Chaloner</td>
-                <td>Esports Commentator</td>
-                <td><a href="https://twitter.com/PaulChaloner" target="_blank">Twitter</a></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Country</th>
+          <th class="games-cell">Games Commentated</th>
+          <th>Official Website / Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>James Bardolph</td>
+          <td>UK</td>
+          <td>Counter-Strike: Global Offensive, Counter-Strike 2</td>
+          <td><a href="https://twitter.com/jamesbardolph" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Alex "Machine" Richardson</td>
+          <td>UK</td>
+          <td>Battlefield 4, League of Legends, Counter-Strike: Global Offensive, Counter-Strike 2</td>
+          <td><a href="https://twitter.com/MachineCSGO" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Paul "Redeye" Chaloner</td>
+          <td>UK</td>
+          <td>Quake, Unreal Tournament, Counter-Strike 1.6, StarCraft: Brood War, Dota 2, Counter-Strike: Global Offensive, Hearthstone, FIFA, and more</td>
+          <td><a href="https://en.wikipedia.org/wiki/Paul_Chaloner" target="_blank">Wikipedia</a></td>
+        </tr>
+        <tr>
+          <td>Ibai Llanos</td>
+          <td>Spain</td>
+          <td>League of Legends, Fortnite, FIFA</td>
+          <td><a href="https://twitter.com/IbaiLlanos" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Anders Blume</td>
+          <td>Denmark</td>
+          <td>Counter-Strike: Global Offensive</td>
+          <td><a href="https://twitter.com/OnFireAnders" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Owen "ODPixel" Davies</td>
+          <td>UK</td>
+          <td>Dota 2</td>
+          <td><a href="https://twitter.com/ODPixel" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Toby "TobiWan" Dawson</td>
+          <td>Australia</td>
+          <td>Dota 2, StarCraft II</td>
+          <td><a href="https://twitter.com/TobiWanDOTA" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Trevor "Quickshot" Henry</td>
+          <td>South Africa</td>
+          <td>League of Legends</td>
+          <td><a href="https://twitter.com/Quickshot" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Erik "DoA" Lonnquist</td>
+          <td>USA</td>
+          <td>Overwatch, League of Legends, StarCraft II</td>
+          <td><a href="https://twitter.com/ggDoA" target="_blank">Twitter</a></td>
+        </tr>
+        <tr>
+          <td>Christopher "MonteCristo" Mykles</td>
+          <td>USA</td>
+          <td>League of Legends, Overwatch</td>
+          <td><a href="https://twitter.com/MontesCristo" target="_blank">Twitter</a></td>
+        </tr>
+      </tbody>
     </table>
 
     <footer>
