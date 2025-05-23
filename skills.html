@@ -99,6 +99,28 @@
       }
     }
 
+    /* Fade-in animation for sections */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-section:nth-of-type(1) { transition-delay: 0.2s; }
+    .fade-in-section:nth-of-type(2) { transition-delay: 0.4s; }
+    .fade-in-section:nth-of-type(3) { transition-delay: 0.6s; }
+    .fade-in-section:nth-of-type(4) { transition-delay: 0.8s; }
+    .fade-in-section:nth-of-type(5) { transition-delay: 1.0s; }
+    .fade-in-section:nth-of-type(6) { transition-delay: 1.2s; }
+    .fade-in-section:nth-of-type(7) { transition-delay: 1.4s; }
+
+    /* footer */
     footer {
       background-color: #ffccbf;
       color: #004080;
@@ -166,36 +188,49 @@
   </header>
 
   <section>
-    <h2>Essential Skills for an Esports Commentator</h2>
-    <p>
-      Becoming a successful esports commentator requires a unique blend of skills. Beyond being passionate about gaming, a person needs excellent communication abilities, quick thinking, and a deep understanding of the games they cover. 
-    </p>
-    <p>
-      Some key skills that have been identified are:
-    </p>
-    <ul class="skills-list">
-      <li><strong>Strong verbal communication:</strong> Clear, engaging, and energetic speech to keep viewers hooked.</li>
-      <li><strong>Game knowledge:</strong> In-depth understanding of game mechanics, strategies, and player tendencies.</li>
-      <li><strong>Quick analysis:</strong> Ability to interpret and explain fast-paced gameplay in real time.</li>
-      <li><strong>Research skills:</strong> Preparing background info about teams, players, and tournaments.</li>
-      <li><strong>Adaptability:</strong> Handling unexpected events or technical issues smoothly.</li>
-      <li><strong>Teamwork:</strong> Coordinating with co-commentators, producers, and technical staff.</li>
-    </ul>
-
+    <div class="fade-in-section">
+      <h2>Essential Skills for an Esports Commentator</h2>
+    </div>
+    <div class="fade-in-section">
+      <p>
+        Becoming a successful esports commentator requires a unique blend of skills. Beyond being passionate about gaming, a person needs excellent communication abilities, quick thinking, and a deep understanding of the games they cover. 
+      </p>
+    </div>
+    <div class="fade-in-section">
+      <p>
+        Some key skills that have been identified are:
+      </p>
+    </div>
+    <div class="fade-in-section">
+      <ul class="skills-list">
+        <li><strong>Strong verbal communication:</strong> Clear, engaging, and energetic speech to keep viewers hooked.</li>
+        <li><strong>Game knowledge:</strong> In-depth understanding of game mechanics, strategies, and player tendencies.</li>
+        <li><strong>Quick analysis:</strong> Ability to interpret and explain fast-paced gameplay in real time.</li>
+        <li><strong>Research skills:</strong> Preparing background info about teams, players, and tournaments.</li>
+        <li><strong>Adaptability:</strong> Handling unexpected events or technical issues smoothly.</li>
+        <li><strong>Teamwork:</strong> Coordinating with co-commentators, producers, and technical staff.</li>
+      </ul>
+    </div>
     <br>
 
-    <h2>Popular Tools & Software</h2>
-    <p>
-      Esports commentators rely on various tools to deliver professional broadcasts. Familiarity with these can give you a competitive edge:
-    </p>
-    <ul class="skills-list">
-      <li><strong>Streaming software:</strong> OBS Studio, Streamlabs OBS for live broadcasting.</li>
-      <li><strong>Audio equipment:</strong> Quality microphones and headphones for clear sound.</li>
-      <li><strong>Communication platforms:</strong> Discord, TeamSpeak to coordinate with teams and production.</li>
-      <li><strong>Video editing software:</strong> Adobe Premiere Pro, DaVinci Resolve for highlight reels.</li>
-      <li><strong>Stat tracking tools:</strong> Game-specific APIs or third-party apps for real-time stats.</li>
-      <li><strong>Social media:</strong> Twitter, Twitch, YouTube to build your personal brand and audience.</li>
-    </ul>
+    <div class="fade-in-section">
+      <h2>Popular Tools & Software</h2>
+    </div>
+    <div class="fade-in-section">
+      <p>
+        Esports commentators rely on various tools to deliver professional broadcasts. Familiarity with these can give you a competitive edge:
+      </p>
+    </div>
+    <div class="fade-in-section">
+      <ul class="skills-list">
+        <li><strong>Streaming software:</strong> OBS Studio, Streamlabs OBS for live broadcasting.</li>
+        <li><strong>Audio equipment:</strong> Quality microphones and headphones for clear sound.</li>
+        <li><strong>Communication platforms:</strong> Discord, TeamSpeak to coordinate with teams and production.</li>
+        <li><strong>Video editing software:</strong> Adobe Premiere Pro, DaVinci Resolve for highlight reels.</li>
+        <li><strong>Stat tracking tools:</strong> Game-specific APIs or third-party apps for real-time stats.</li>
+        <li><strong>Social media:</strong> Twitter, Twitch, YouTube to build your personal brand and audience.</li>
+      </ul>
+    </div>
   </section>
 
   <footer>
@@ -212,5 +247,32 @@
       <p>&copy; 2025 The Power of Words: Breaking into Esports Commentary. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    }
+    
+    // Function to handle the scroll event
+    function handleScroll() {
+      const sections = document.querySelectorAll('.fade-in-section');
+      sections.forEach((section) => {
+        if (isInViewport(section)) {
+          section.classList.add('is-visible');
+        }
+      });
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Run once on page load
+    window.addEventListener('load', handleScroll);
+  </script>
 </body>
 </html>
